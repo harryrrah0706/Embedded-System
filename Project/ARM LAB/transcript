@@ -15,3 +15,157 @@ vmap xilinxcorelib C:/Xilinx/14.1/ISE_DS/ISE/vhdl/mti_se/10.1b/nt64/xilinxcoreli
 # Compile of DetectorBus.vhd was successful.
 # Compile of tb_cortexm0.vhd was successful.
 # 6 compiles, 0 failed with no errors. 
+vsim -gui work.tb_cortexm0
+# vsim -gui work.tb_cortexm0 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cortexm0(tb)
+# Loading unisim.vcomponents
+# Loading work.cm0_dssystem(behavioral)
+# Loading work.detectorbus(behavioral)
+# Loading unisim.fdce(fdce_v)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cortexm0_memory(cortexm0_memory_a)
+# Loading xilinxcorelib.blk_mem_gen_v7_1(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_mem_module(mem_module_behavioral)
+# ** Note:  Block Memory Generator CORE Generator module loading initial data...
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# ** Error: (vsim-7) Failed to open VHDL file "cortexm0_memory.mif" in rb mode.
+# 
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# ** Fatal: (vsim-7) Failed to open VHDL file "cortexm0_memory.mif" in rb mode.
+# 
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module/line__3302 File: C:/Xilinx/14.1/ISE_DS/ISE/vhdl/src/XilinxCoreLib/BLK_MEM_GEN_V7_1.vhd
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of CM0_DSSystem.vhd was successful.
+# Compile of cortexm0_memory.vhd was successful.
+# Compile of CORTEXM0DS.v was successful.
+# Compile of cortexm0ds_logic.v was successful.
+# Compile of DetectorBus.vhd was successful.
+# Compile of tb_cortexm0.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim -gui work.tb_cortexm0
+# vsim -gui work.tb_cortexm0 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cortexm0(tb)
+# Loading unisim.vcomponents
+# Loading work.cm0_dssystem(behavioral)
+# Loading work.detectorbus(behavioral)
+# Loading unisim.fdce(fdce_v)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cortexm0_memory(cortexm0_memory_a)
+# Loading xilinxcorelib.blk_mem_gen_v7_1(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_mem_module(mem_module_behavioral)
+# ** Note:  Block Memory Generator CORE Generator module loading initial data...
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# ** Error: (vsim-7) Failed to open VHDL file "cortexm0_memory.mif" in rb mode.
+# 
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# ** Fatal: (vsim-7) Failed to open VHDL file "cortexm0_memory.mif" in rb mode.
+# 
+# No such file or directory. (errno = ENOENT)
+#    Time: 0 ps  Iteration: 0  Process: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module/line__3302 File: C:/Xilinx/14.1/ISE_DS/ISE/vhdl/src/XilinxCoreLib/BLK_MEM_GEN_V7_1.vhd
+# FATAL ERROR while loading design
+# Error loading design
+# Compile of CM0_DSSystem.vhd was successful.
+# Compile of cortexm0_memory.vhd was successful.
+# Compile of CORTEXM0DS.v was successful.
+# Compile of cortexm0ds_logic.v was successful.
+# Compile of DetectorBus.vhd was successful.
+# Compile of tb_cortexm0.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim -gui work.tb_cortexm0
+# vsim -gui work.tb_cortexm0 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cortexm0(tb)
+# Loading unisim.vcomponents
+# Loading work.cm0_dssystem(behavioral)
+# Loading work.detectorbus(behavioral)
+# Loading unisim.fdce(fdce_v)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cortexm0_memory(cortexm0_memory_a)
+# Loading xilinxcorelib.blk_mem_gen_v7_1(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_mem_module(mem_module_behavioral)
+# ** Note:  Block Memory Generator CORE Generator module loading initial data...
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# Loading xilinxcorelib.blk_mem_gen_v7_1_output_stage(output_stage_behavioral)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_softecc_output_reg_stage(softecc_output_reg_stage_behavioral)
+# Loading work.CORTEXM0DS
+# Loading work.cortexm0ds_logic
+add wave -position insertpoint  \
+sim:/tb_cortexm0/DUT/Led0 \
+sim:/tb_cortexm0/DUT/Led1 \
+sim:/tb_cortexm0/DUT/Led2 \
+sim:/tb_cortexm0/DUT/Led3 \
+sim:/tb_cortexm0/DUT/Led4 \
+sim:/tb_cortexm0/DUT/Led5 \
+sim:/tb_cortexm0/DUT/Led6 \
+sim:/tb_cortexm0/DUT/Led7 \
+sim:/tb_cortexm0/DUT/reset \
+sim:/tb_cortexm0/DUT/Clock_In \
+sim:/tb_cortexm0/DUT/dummy \
+sim:/tb_cortexm0/DUT/HRData
+# Causality operation skipped due to absense of debug database file
+run 1000 us
+# ** Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# Compile of CM0_DSSystem.vhd was successful.
+# Compile of cortexm0_memory.vhd was successful.
+# Compile of CORTEXM0DS.v was successful.
+# Compile of cortexm0ds_logic.v was successful.
+# Compile of DetectorBus.vhd was successful.
+# Compile of tb_cortexm0.vhd was successful.
+# 6 compiles, 0 failed with no errors. 
+vsim -gui work.tb_cortexm0
+# vsim -gui work.tb_cortexm0 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_cortexm0(tb)
+# Loading unisim.vcomponents
+# Loading work.cm0_dssystem(behavioral)
+# Loading work.detectorbus(behavioral)
+# Loading unisim.fdce(fdce_v)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cortexm0_memory(cortexm0_memory_a)
+# Loading xilinxcorelib.blk_mem_gen_v7_1(behavioral)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_mem_module(mem_module_behavioral)
+# ** Note:  Block Memory Generator CORE Generator module loading initial data...
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
+# Loading xilinxcorelib.blk_mem_gen_v7_1_output_stage(output_stage_behavioral)
+# Loading xilinxcorelib.blk_mem_gen_v7_1_softecc_output_reg_stage(softecc_output_reg_stage_behavioral)
+# Loading work.CORTEXM0DS
+# Loading work.cortexm0ds_logic
+add wave -position insertpoint  \
+sim:/tb_cortexm0/DUT/Led0 \
+sim:/tb_cortexm0/DUT/Led1 \
+sim:/tb_cortexm0/DUT/Led2 \
+sim:/tb_cortexm0/DUT/Led3 \
+sim:/tb_cortexm0/DUT/Led4 \
+sim:/tb_cortexm0/DUT/Led5 \
+sim:/tb_cortexm0/DUT/Led6 \
+sim:/tb_cortexm0/DUT/Led7 \
+sim:/tb_cortexm0/DUT/reset \
+sim:/tb_cortexm0/DUT/Clock_In \
+sim:/tb_cortexm0/DUT/dummy \
+sim:/tb_cortexm0/DUT/HRData
+run 1000 us
+# ** Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior.
+#    Time: 0 ps  Iteration: 2  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module

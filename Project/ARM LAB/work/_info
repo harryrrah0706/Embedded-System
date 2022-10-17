@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\fx19583\OneDrive - University of Bristol\Embedded real time system\source\grlib-gpl-1.1.0-b4108\designs\leon3-xilinx-xc3sd-1800
+vCORTEXM0DS
+!s100 VMOK:DnEdnf`azV76=U:a1
+IFzE>HWASZL>S^aMDH;gDQ3
+V1L6Qg_jd`_h[58QfX:Ek]0
+Z0 dC:\Users\fx19583\Embedded\Project\ARM LAB
+Z1 w1602769260
+8C:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v
+FC:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v
+L0 27
+Z2 OL;L;10.1b;51
+r1
+31
+!s90 -reportprogress|300|-work|work|-quiet|-novopt|C:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v|
+Z3 o-work work -quiet
+Z4 tQuiet 1
+n@c@o@r@t@e@x@m0@d@s
+!s108 1666017227.712000
+!s107 C:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v|
+!i10b 1
+!s85 0
+vcortexm0ds_logic
+!s100 @lHIifTa3SPW1N85aJXFa2
+IMFo<8Q6b0U3CnVGOH>VWP0
+V^^SAMV@Xd[IRUm[K>SzZ<3
+Z5 dC:\Users\fx19583\Embedded\Project\ARM LAB
+R1
+8C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v
+FC:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v
+L0 27
+R2
+r1
+31
+!s90 -reportprogress|300|-work|work|-quiet|-novopt|C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v|
+R3
+R4
+!i10b 1
+!s85 0
+!s108 1666017227.778000
+!s107 C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v|
+Etb_cortexm0
+R1
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+R5
+Z8 8C:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd
+Z9 FC:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd
+l0
+L4
+VjiL9f;QPJG8i6k3hYE^YB1
+!s100 73bTzBdMlTVCEEN>M_HDo3
+Z10 OL;C;10.1b;51
+31
+!i10b 1
+Z11 !s108 1666017228.104000
+Z12 !s90 -reportprogress|300|-work|work|-93|-explicit|-quiet|-source|-nowarn|1|-nowarn|5|-novopt|C:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd|
+Z13 !s107 C:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd|
+Z14 o-work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5
+Z15 tShow_source 1 Show_Warning1 0 Show_Warning5 0 Explicit 1 Quiet 1
+Atb
+R6
+R7
+Z16 DEx4 work 11 tb_cortexm0 0 22 jiL9f;QPJG8i6k3hYE^YB1
+l28
+L7
+Z17 V9jIoJ12Vh0oj88l=JaS[@2
+Z18 !s100 C0zOj3H777;5:E2feZO6K1
+R10
+31
+!i10b 1
+R11
+R12
+R13
+R14
+R15

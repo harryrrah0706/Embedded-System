@@ -1,0 +1,7 @@
+# Compile of CM0_DSSystem.vhd failed with 3 errors.
+# Compile of cortexm0_memory.vhd failed with 2 errors.
+# Compile of CORTEXM0DS.v was successful.
+# Compile of cortexm0ds_logic.v was successful.
+# Compile of DetectorBus.vhd failed with 3 errors.
+# Compile of tb_cortexm0.vhd was successful.
+# 6 compiles, 3 failed with 8 errors. 

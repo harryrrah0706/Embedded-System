@@ -1,0 +1,39 @@
+C:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded/sources/arm_lab/tb_cortexm0.vhd
+
+} {} {}} C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd {0 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd
+###### C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(29): library UNISIM;
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(29): Library unisim not found.
+###### C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(30): use UNISIM.VComponents.all;
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(30): (vcom-1136) Unknown identifier "UNISIM".
+
+###### C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(32): entity CM0_DSSystem is
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/CM0_DSSystem.vhd(32): VHDL Compiler exiting
+
+} {4.0 5.0 7.0 8.0 11.0 12.0} {}} C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd {0 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd
+###### C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(29): library UNISIM;
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(29): Library unisim not found.
+###### C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(30): use UNISIM.VComponents.all;
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(30): (vcom-1136) Unknown identifier "UNISIM".
+
+###### C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(32): entity DetectorBus is
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/DetectorBus.vhd(32): VHDL Compiler exiting
+
+} {4.0 5.0 7.0 8.0 11.0 12.0} {}} C:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v {1 {vlog -work work -quiet -novopt C:/Users/fx19583/Embedded/sources/arm_lab/CORTEXM0DS.v
+
+} {} {}} C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v {1 {vlog -work work -quiet -novopt C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0ds_logic.v
+
+} {} {}} C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd {0 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd
+###### C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd(41): LIBRARY XilinxCoreLib;
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd(41): Library xilinxcorelib not found.
+###### C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd(43): ENTITY cortexm0_memory IS
+
+** Error: C:/Users/fx19583/Embedded/sources/arm_lab/cortexm0_memory.vhd(43): VHDL Compiler exiting
+
+} {4.0 5.0 7.0 8.0} {}}

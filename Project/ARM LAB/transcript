@@ -1,7 +1,17 @@
-# Compile of CM0_DSSystem.vhd failed with 3 errors.
-# Compile of cortexm0_memory.vhd failed with 2 errors.
+# Error: Acs sdne.
+# $
+#        Unable to replace existing ini file (C:/Users/fx19583/Embedded/Project/ARM LAB/ARM LAB.mpf).  File can not be renamed.
+vmap -del unisim
+# Removing reference to logical library unisim
+# Modifying C:/Users/fx19583/Embedded/Project/ARM LAB/ARM LAB.mpf
+vmap unisim C:/Xilinx/14.1/ISE_DS/ISE/vhdl/mti_se/10.1b/nt64/unisim
+# Modifying C:/Users/fx19583/Embedded/Project/ARM LAB/ARM LAB.mpf
+vmap xilinxcorelib C:/Xilinx/14.1/ISE_DS/ISE/vhdl/mti_se/10.1b/nt64/xilinxcorelib
+# Modifying C:/Users/fx19583/Embedded/Project/ARM LAB/ARM LAB.mpf
+# Compile of CM0_DSSystem.vhd was successful.
+# Compile of cortexm0_memory.vhd was successful.
 # Compile of CORTEXM0DS.v was successful.
 # Compile of cortexm0ds_logic.v was successful.
-# Compile of DetectorBus.vhd failed with 3 errors.
+# Compile of DetectorBus.vhd was successful.
 # Compile of tb_cortexm0.vhd was successful.
-# 6 compiles, 3 failed with 8 errors. 
+# 6 compiles, 0 failed with no errors. 

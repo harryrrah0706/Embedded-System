@@ -29,6 +29,7 @@ package config is
   constant CFG_CLK_NOFB : integer := 0;
 -- LEON3 processor core
   constant CFG_LEON3 : integer := 1;
+  constant CFG_CM0 : integer := 1;
   constant CFG_NCPU : integer := (1);
   constant CFG_NWIN : integer := (8);
   constant CFG_V8 : integer := 0; 

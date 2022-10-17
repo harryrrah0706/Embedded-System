@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-10-17T17:36:45</DateModified>
+  <DateModified>2022-10-17T17:46:54</DateModified>
   <ModuleName>CORTEXM0DS</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/fx19583/Embedded-Sytem/ISE/CortexM0/iseconfig/CORTEXM0DS.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/fx19583/Embedded-Sytem/ISE/CortexM0</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/fx19583/Embedded-Sytem/ISE/CortexM0\</ImplementationReportsDirectory>
   <DateInitialized>2022-10-17T17:36:45</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

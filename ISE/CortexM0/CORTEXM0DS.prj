@@ -1,0 +1,2 @@
+verilog work "../../sources/arm_lab/cortexm0ds_logic.v"
+verilog work "../../sources/arm_lab/CORTEXM0DS.v"

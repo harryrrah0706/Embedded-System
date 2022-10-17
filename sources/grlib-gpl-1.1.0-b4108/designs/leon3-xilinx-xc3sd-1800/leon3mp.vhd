@@ -608,4 +608,13 @@ begin
       );
 -- pragma translate_on
 
+----------------------------------------------------------------------
+--- ARM Cortex-M0 Processor -----------------------------------------
+----------------------------------------------------------------------
+  cm0gen : if CFG_CM0 = 1 generate
+    u1 : cm0_wrapper 
+    port map (clkm,rstn,ahbmi,ahbmo(0));
+  end generate;
+  
+  
 end rtl;

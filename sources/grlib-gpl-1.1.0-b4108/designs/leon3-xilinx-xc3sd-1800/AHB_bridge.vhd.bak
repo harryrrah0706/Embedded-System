@@ -31,7 +31,6 @@ architecture structural of AHB_bridge is
 --declare a component for state_machine
  
 --declare a component for ahbmst 
-
 --declare a component for data_swapper 
  
   signal dmai : ahb_dma_in_type;
@@ -40,4 +39,4 @@ begin
 --instantiate state_machine component and make the connections
 --instantiate the ahbmst component and make the connections 
 --instantiate the data_swapper component and make the connections
-end structural;
+end structural;

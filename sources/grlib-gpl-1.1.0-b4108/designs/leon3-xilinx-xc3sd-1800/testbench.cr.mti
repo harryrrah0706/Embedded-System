@@ -1,6 +1,4 @@
-C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd
-
-} {} {}} ../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
+../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
 
 } {} {}} ../../lib/grlib/amba/ahbctrl.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd
 

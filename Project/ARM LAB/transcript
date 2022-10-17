@@ -36,32 +36,11 @@ vsim -gui -novopt work.tb_cortexm0
 # Refreshing C:/Users/fx19583/Embedded-Sytem/Project/ARM LAB/work.cortexm0ds_logic
 # Loading work.cortexm0ds_logic
 add wave -position insertpoint  \
-sim:/tb_cortexm0/DUT/Led0 \
-sim:/tb_cortexm0/DUT/Led1 \
-sim:/tb_cortexm0/DUT/Led2 \
-sim:/tb_cortexm0/DUT/Led3 \
-sim:/tb_cortexm0/DUT/Led4 \
-sim:/tb_cortexm0/DUT/Led5 \
-sim:/tb_cortexm0/DUT/Led6 \
-sim:/tb_cortexm0/DUT/Led7 \
-sim:/tb_cortexm0/DUT/reset \
-sim:/tb_cortexm0/DUT/Clock_In \
-sim:/tb_cortexm0/DUT/dummy \
-sim:/tb_cortexm0/DUT/HRData \
-sim:/tb_cortexm0/DUT/HWData \
-sim:/tb_cortexm0/DUT/HADDR \
-sim:/tb_cortexm0/DUT/HBurst \
-sim:/tb_cortexm0/DUT/HProt \
-sim:/tb_cortexm0/DUT/HSize \
-sim:/tb_cortexm0/DUT/HTrans \
-sim:/tb_cortexm0/DUT/HWrite \
-sim:/tb_cortexm0/DUT/Clock \
-sim:/tb_cortexm0/DUT/none \
-sim:/tb_cortexm0/DUT/led_value \
-sim:/tb_cortexm0/DUT/reset_rom \
-sim:/tb_cortexm0/DUT/SyncResetPulse
-run 1000 u
-# Invalid time value: 1000 u
+sim:/tb_cortexm0/DUT/Led3
+add wave -position insertpoint  \
+sim:/tb_cortexm0/DUT/HRData
+add wave -position insertpoint  \
+sim:/tb_cortexm0/DUT/Clock_In
 run 1000 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ns  Iteration: 2  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
@@ -76,28 +55,3 @@ run 1000 us
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ns  Iteration: 2  Instance: /tb_cortexm0/DUT/Inst_Memory/U0/native_mem_module/mem_module
 # Causality operation skipped due to absense of debug database file
-add wave -position insertpoint  \
-sim:/tb_cortexm0/DUT/Led0 \
-sim:/tb_cortexm0/DUT/Led1 \
-sim:/tb_cortexm0/DUT/Led2 \
-sim:/tb_cortexm0/DUT/Led3 \
-sim:/tb_cortexm0/DUT/Led4 \
-sim:/tb_cortexm0/DUT/Led5 \
-sim:/tb_cortexm0/DUT/Led6 \
-sim:/tb_cortexm0/DUT/Led7 \
-sim:/tb_cortexm0/DUT/reset \
-sim:/tb_cortexm0/DUT/Clock_In \
-sim:/tb_cortexm0/DUT/dummy \
-sim:/tb_cortexm0/DUT/HRData \
-sim:/tb_cortexm0/DUT/HWData \
-sim:/tb_cortexm0/DUT/HADDR \
-sim:/tb_cortexm0/DUT/HBurst \
-sim:/tb_cortexm0/DUT/HProt \
-sim:/tb_cortexm0/DUT/HSize \
-sim:/tb_cortexm0/DUT/HTrans \
-sim:/tb_cortexm0/DUT/HWrite \
-sim:/tb_cortexm0/DUT/Clock \
-sim:/tb_cortexm0/DUT/none \
-sim:/tb_cortexm0/DUT/led_value \
-sim:/tb_cortexm0/DUT/reset_rom \
-sim:/tb_cortexm0/DUT/SyncResetPulse

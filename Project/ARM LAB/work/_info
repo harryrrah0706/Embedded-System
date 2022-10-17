@@ -16,7 +16,7 @@ L32
 Vn=1P]ETWWZ;I@koXWe[?D2
 Z7 OL;C;10.1b;51
 32
-Z8 !s108 1666025467.468000
+Z8 !s108 1666025693.150000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/CM0_DSSystem.vhd|
 Z10 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/CM0_DSSystem.vhd|
 Z11 o-work work -2002 -explicit
@@ -52,7 +52,7 @@ L43
 Vg=Fg_di4@5ljR?CHH>Ybe1
 R7
 32
-Z16 !s108 1666025467.596000
+Z16 !s108 1666025693.279000
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/cortexm0_memory.vhd|
 Z18 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/cortexm0_memory.vhd|
 R11
@@ -95,7 +95,7 @@ n@c@o@r@t@e@x@m0@d@s
 !s85 0
 !s100 zjgo1KDK:=Ih8YLX5[`jh3
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/CORTEXM0DS.v|
-!s108 1666025467.662000
+!s108 1666025693.347000
 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/CORTEXM0DS.v|
 vcortexm0ds_logic
 !i10b 1
@@ -113,7 +113,7 @@ R19
 R20
 !s100 :i6Jli8C?Mi5F7XHK]5W41
 !s90 -reportprogress|300|-work|work|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/cortexm0ds_logic.v|
-!s108 1666025467.699000
+!s108 1666025693.391000
 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/cortexm0ds_logic.v|
 Edetectorbus
 R13
@@ -128,7 +128,7 @@ L32
 VYFNBg<FiE45iDjPJj=HS_3
 R7
 32
-Z23 !s108 1666025467.826000
+Z23 !s108 1666025693.518000
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/DetectorBus.vhd|
 Z25 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/DetectorBus.vhd|
 R11
@@ -164,7 +164,7 @@ L4
 VQDVFKWgeQeaEez_G5k;^X3
 R7
 32
-Z28 !s108 1666025467.946000
+Z28 !s108 1666025693.649000
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/tb_cortexm0.vhd|
 Z30 !s107 C:/Users/fx19583/Embedded-Sytem/sources/arm_lab/tb_cortexm0.vhd|
 R11

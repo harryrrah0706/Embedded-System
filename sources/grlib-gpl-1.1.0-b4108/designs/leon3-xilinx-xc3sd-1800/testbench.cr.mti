@@ -517,6 +517,8 @@
 
 } {} {}} ../../lib/techmap/maps/allmem.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/allmem.vhd
 
+} {} {}} config.vhd {1 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/config.vhd
+
 } {} {}} ../../lib/grlib/sparc/cpu_disas.vhd {2 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd
 ###### C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd(50): end;
 ** Warning: [13] C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd(50): (vcom-2063) Complete design-unit 'cpu_disas' is inside synthesis_off/translate_off pragma.
@@ -537,8 +539,6 @@
 } {} {}} ../../lib/gaisler/ddr/ddr2spa.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddr2spa.vhd
 
 } {} {}} ../../lib/techmap/maps/cpu_disas_net.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/cpu_disas_net.vhd
-
-} {} {}} leon3mp.vhd {1 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd
 
 } {} {}} ../../lib/eth/core/greth_pkg.vhd {1 {vcom -work eth -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded/sources/grlib-gpl-1.1.0-b4108/lib/eth/core/greth_pkg.vhd
 

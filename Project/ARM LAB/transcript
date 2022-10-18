@@ -1,13 +1,4 @@
 # Compile of CM0_DSSystem.vhd was successful.
-# Compile of cortexm0_memory.vhd failed with 1 errors.
-# Compile of CORTEXM0DS.v was successful.
-# Compile of cortexm0ds_logic.v was successful.
-# Compile of DetectorBus.vhd was successful.
-# Compile of tb_cortexm0.vhd was successful.
-# 6 compiles, 1 failed with 1 error. 
-vmap xilinxcorelib C:/Xilinx/14.1/ISE_DS/ISE/vhdl/mti_se/10.1b/nt64/xilinxcorelib
-# Modifying C:/Users/fx19583/Embedded-Sytem/Project/ARM LAB/ARM LAB.mpf
-# Compile of CM0_DSSystem.vhd was successful.
 # Compile of cortexm0_memory.vhd was successful.
 # Compile of CORTEXM0DS.v was successful.
 # Compile of cortexm0ds_logic.v was successful.

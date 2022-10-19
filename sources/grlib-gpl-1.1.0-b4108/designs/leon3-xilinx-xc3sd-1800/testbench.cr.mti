@@ -12,7 +12,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/grlib/sparc/sparc_disas.vhd {2 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc_disas.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc_disas.vhd(44): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc_disas.vhd(44): (vcom-2063) Complete design-unit 'sparc_disas' is inside synthesis_off/translate_off pragma.
 
 
@@ -22,11 +21,11 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/ddr/ddrsp64a.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddrsp64a.vhd
 
-} {} {}} ../../lib/gaisler/misc/charrom_package.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/misc/charrom_package.vhd
-
 } {} {}} ../../lib/gaisler/arith/mul32.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/arith/mul32.vhd
 
 } {} {}} ../../lib/grlib/sparc/sparc.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc.vhd
+
+} {} {}} ../../lib/gaisler/misc/charrom_package.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/misc/charrom_package.vhd
 
 } {} {}} ../../lib/gaisler/misc/apbps2.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/misc/apbps2.vhd
 
@@ -38,13 +37,11 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/micron/sdram/components.vhd {2 {vcom -work micron -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/components.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/components.vhd(259): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/components.vhd(259): (vcom-2063) Complete design-unit 'components' is inside synthesis_off/translate_off pragma.
 
 
 } {} {}} ../../lib/gaisler/uart/libdcom.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/uart/libdcom.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/uart/libdcom.vhd(169): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/uart/libdcom.vhd(169): (vcom-2063) Complete design-unit 'libdcom' is inside synthesis_off/translate_off pragma.
 
 
@@ -54,7 +51,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/jtag/jtagtst.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/jtag/jtagtst.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/jtag/jtagtst.vhd(103): end;  
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/jtag/jtagtst.vhd(103): (vcom-2063) Complete design-unit 'jtagtst' is inside synthesis_off/translate_off pragma.
 
 
@@ -70,7 +66,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/sram.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram.vhd(50): end;     
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram.vhd(50): (vcom-2063) Complete design-unit 'sram' is inside synthesis_off/translate_off pragma.
 
 
@@ -78,7 +73,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/tech/dware/simprims/DWpackages.vhd {2 {vcom -work dware -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/dware/simprims/DWpackages.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/dware/simprims/DWpackages.vhd(31): end ;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/dware/simprims/DWpackages.vhd(31): (vcom-2063) Complete design-unit 'DW_mult_pipe' is inside synthesis_off/translate_off pragma.
 
 
@@ -94,7 +88,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/cypress/ssram/components.vhd {2 {vcom -work cypress -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/cypress/ssram/components.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/cypress/ssram/components.vhd(161): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/cypress/ssram/components.vhd(161): (vcom-2063) Complete design-unit 'components' is inside synthesis_off/translate_off pragma.
 
 
@@ -116,7 +109,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/tech/unisim/ise/unisim_VPKG.vhd {2 {vcom -work unisim -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/unisim/ise/unisim_VPKG.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/unisim/ise/unisim_VPKG.vhd(104): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/tech/unisim/ise/unisim_VPKG.vhd(104): (vcom-2063) Complete design-unit 'vpkg' is inside synthesis_off/translate_off pragma.
 
 
@@ -158,7 +150,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/work/debug/grtestmod.vhd {2 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/work/debug/grtestmod.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/work/debug/grtestmod.vhd(84): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/work/debug/grtestmod.vhd(84): (vcom-2063) Complete design-unit 'grtestmod' is inside synthesis_off/translate_off pragma.
 
 
@@ -208,7 +199,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/grusb_dclsim.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusb_dclsim.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusb_dclsim.vhd(120): end grusb_dclsim;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusb_dclsim.vhd(120): (vcom-2063) Complete design-unit 'grusb_dclsim' is inside synthesis_off/translate_off pragma.
 
 
@@ -258,7 +248,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/grlib/util/util.vhd {2 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/util/util.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/util/util.vhd(35): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/util/util.vhd(35): (vcom-2063) Complete design-unit 'report_version' is inside synthesis_off/translate_off pragma.
 
 
@@ -270,13 +259,11 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/grusbdcsim.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusbdcsim.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusbdcsim.vhd(57): end grusbdcsim;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/grusbdcsim.vhd(57): (vcom-2063) Complete design-unit 'grusbdcsim' is inside synthesis_off/translate_off pragma.
 
 
 } {} {}} ../../lib/gaisler/sim/usbsim.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/usbsim.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/usbsim.vhd(408): end usbsim;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/usbsim.vhd(408): (vcom-2063) Complete design-unit 'usbsim' is inside synthesis_off/translate_off pragma.
 
 
@@ -320,7 +307,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/pwm_check.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/pwm_check.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/pwm_check.vhd(53): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/pwm_check.vhd(53): (vcom-2063) Complete design-unit 'pwm_check' is inside synthesis_off/translate_off pragma.
 
 
@@ -390,13 +376,11 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/fmf/fifo/idt7202.vhd {2 {vcom -work fmf -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/fmf/fifo/idt7202.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/fmf/fifo/idt7202.vhd(126): END idt7202;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/fmf/fifo/idt7202.vhd(126): (vcom-2063) Complete design-unit 'idt7202' is inside synthesis_off/translate_off pragma.
 
 
 } {} {}} ../../lib/hynix/ddr2/components.vhd {2 {vcom -work hynix -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/hynix/ddr2/components.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/hynix/ddr2/components.vhd(55): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/hynix/ddr2/components.vhd(55): (vcom-2063) Complete design-unit 'components' is inside synthesis_off/translate_off pragma.
 
 
@@ -412,7 +396,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/micron/sdram/mt48lc16m16a2.vhd {2 {vcom -work micron -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/mt48lc16m16a2.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/mt48lc16m16a2.vhd(26): END mti_pkg;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/micron/sdram/mt48lc16m16a2.vhd(26): (vcom-2063) Complete design-unit 'mti_pkg' is inside synthesis_off/translate_off pragma.
 
 
@@ -464,7 +447,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/synplify/sim/synplify.vhd {2 {vcom -work synplify -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/synplify/sim/synplify.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/synplify/sim/synplify.vhd(29): end prim_counter;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/synplify/sim/synplify.vhd(29): (vcom-2063) Complete design-unit 'prim_counter' is inside synthesis_off/translate_off pragma.
 
 
@@ -532,7 +514,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/sim.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sim.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sim.vhd(353): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sim.vhd(353): (vcom-2063) Complete design-unit 'sim' is inside synthesis_off/translate_off pragma.
 
 
@@ -544,7 +525,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/grlib/sparc/cpu_disas.vhd {2 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd(50): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/cpu_disas.vhd(50): (vcom-2063) Complete design-unit 'cpu_disas' is inside synthesis_off/translate_off pragma.
 
 
@@ -578,7 +558,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/phy.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/phy.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/phy.vhd(68): end;
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/phy.vhd(68): (vcom-2063) Complete design-unit 'phy' is inside synthesis_off/translate_off pragma.
 
 
@@ -586,7 +565,6 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/gaisler/sim/sram16.vhd {2 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram16.vhd
 ###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram16.vhd(52): end;     
-
 ** Warning: [13] C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/sram16.vhd(52): (vcom-2063) Complete design-unit 'sram16' is inside synthesis_off/translate_off pragma.
 
 

@@ -1,4 +1,6 @@
-../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
+C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd
+
+} {} {}} ../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
 
 } {} {}} ../../lib/grlib/amba/ahbctrl.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd
 
@@ -19,11 +21,11 @@
 
 } {} {}} ../../lib/gaisler/ddr/ddrsp64a.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddrsp64a.vhd
 
+} {} {}} ../../lib/gaisler/misc/charrom_package.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/misc/charrom_package.vhd
+
 } {} {}} ../../lib/grlib/sparc/sparc.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/sparc/sparc.vhd
 
 } {} {}} ../../lib/gaisler/arith/mul32.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/arith/mul32.vhd
-
-} {} {}} ../../lib/gaisler/misc/charrom_package.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/misc/charrom_package.vhd
 
 } {} {}} ../../lib/techmap/maps/regfile_3p.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/regfile_3p.vhd
 
@@ -78,11 +80,9 @@
 
 } {} {}} ../../lib/techmap/maps/scanreg.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/scanreg.vhd
 
-} {} {}} C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd {0 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(1): cm0
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(1): near "cm0": syntax error
+} {} {}} C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd
 
-} {3.0 4.0} {}} ../../lib/gaisler/ddr/ddr2spax_ahb.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddr2spax_ahb.vhd
+} {} {}} ../../lib/gaisler/ddr/ddr2spax_ahb.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddr2spax_ahb.vhd
 
 } {} {}} ../../lib/grlib/amba/defmst.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/amba/defmst.vhd
 
@@ -116,9 +116,9 @@
 
 } {} {}} ../../lib/gaisler/jtag/ahbjtag.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/jtag/ahbjtag.vhd
 
-} {} {}} ../../lib/hynix/ddr2/HY5PS121621F.vhd {1 {vcom -work hynix -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/hynix/ddr2/HY5PS121621F.vhd
-
 } {} {}} ../../lib/techmap/maps/inpad_ddr.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/inpad_ddr.vhd
+
+} {} {}} ../../lib/hynix/ddr2/HY5PS121621F.vhd {1 {vcom -work hynix -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/hynix/ddr2/HY5PS121621F.vhd
 
 } {} {}} ../../lib/work/debug/debug.vhd {1 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/work/debug/debug.vhd
 
@@ -544,14 +544,9 @@
 
 } {} {}} ../../lib/techmap/maps/cpu_disas_net.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/cpu_disas_net.vhd
 
-} {} {}} leon3mp.vhd {0 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd(615):     u1 : cm0_wrapper 
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd(615): (vcom-1141) Identifier "cm0_wrapper" does not identify a component declaration.
+} {} {}} leon3mp.vhd {1 {vcom -work work -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd
 
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd(620): end rtl;
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/leon3mp.vhd(620): VHDL Compiler exiting
-
-} {3.0 4.0 6.0 7.0} {}} ../../lib/eth/core/greth_pkg.vhd {1 {vcom -work eth -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/eth/core/greth_pkg.vhd
+} {} {}} ../../lib/eth/core/greth_pkg.vhd {1 {vcom -work eth -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/eth/core/greth_pkg.vhd
 
 } {} {}} ../../lib/fmf/flash/s25fl064a.vhd {1 {vcom -work fmf -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/fmf/flash/s25fl064a.vhd
 

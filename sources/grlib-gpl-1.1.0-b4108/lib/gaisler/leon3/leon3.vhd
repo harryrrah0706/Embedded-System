@@ -899,4 +899,14 @@ component leon3ftsh
   );
 end component; 
 
+component cm0_wrapper
+    port(
+ -- Clock and Reset -----------------
+    clkm : in std_logic;
+    rstn : in std_logic;
+ -- AHB Master records --------------
+    ahbmi : in ahb_mst_in_type;
+    ahbmo : out ahb_mst_out_type);
+end component;
+
 end;

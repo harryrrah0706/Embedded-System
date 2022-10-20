@@ -45,6 +45,10 @@ begin
         dmai.start <= '0';
         if htrans = "10" then
           dmai.start <= '1';
+	        dmai.address <= haddr;
+	        dmai.wdata <= hwdata;
+	        dmai.write <= hwrite;
+	        dmai.size <= hsize;
           next_state <= FETCH;
         else
           next_state <= IDLE;

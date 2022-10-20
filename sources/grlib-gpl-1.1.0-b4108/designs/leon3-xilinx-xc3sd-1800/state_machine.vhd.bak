@@ -34,7 +34,7 @@ architecture structural of state_machine is
   
 begin
   
-  state_transition : process(current_state,htrans,dmao.ready)
+  state_transition : process(htrans,dmao.ready)
   begin
     
     case current_state is

@@ -117,6 +117,17 @@ begin
       sleeping => open);
   
   ahblite_bridge : AHB_bridge
-    port map(clkm,rstn,ahbmi,ahbmo,haddr,hsize,htrans,hwdata,hwrite,hrdata,hready);
+    port map(
+      clkm,
+      rstn,
+      ahbmi,
+      ahbmo,
+      haddr,
+      hsize,
+      htrans,
+      hwdata,
+      hwrite,
+      hrdata,
+      hready);
   
 end structural;

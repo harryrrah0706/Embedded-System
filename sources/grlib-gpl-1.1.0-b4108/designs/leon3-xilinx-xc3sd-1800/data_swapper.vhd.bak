@@ -29,6 +29,7 @@ begin
     temp(15 downto 8) <= dmao.rdata(23 downto 16);
     temp(23 downto 16) <= dmao.rdata(15 downto 8);
     temp(31 downto 24) <= dmao.rdata(7 downto 0);
+    hrdata <= temp;
   end process;
   
 end structural;

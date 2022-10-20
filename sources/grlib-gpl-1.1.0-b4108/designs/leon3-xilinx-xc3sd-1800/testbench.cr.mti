@@ -1,4 +1,6 @@
-../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
+C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/AHB_bridge.vhd
+
+} {} {}} ../../lib/gaisler/leon3/mmulrue.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/mmulrue.vhd
 
 } {} {}} ../../lib/grlib/amba/ahbctrl.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/amba/ahbctrl.vhd
 
@@ -78,20 +80,9 @@
 
 } {} {}} ../../lib/gaisler/uart/dcom.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/uart/dcom.vhd
 
-} {} {}} C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd {0 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(105):       hburst => open,
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(105): (vcom-1028) Formal "hburst" has already been associated in a positional association.
+} {} {}} C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd
 
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(106):       hmastlock => open,
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(106): (vcom-1028) Formal "hmastlock" has already been associated in a positional association.
-
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(107):       hprot => open,
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(107): (vcom-1028) Formal "hprot" has already been associated in a positional association.
-
-###### C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(115):       sleeping => open);
-** Error: C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/cm0_wrapper.vhd(115): VHDL Compiler exiting
-
-} {3.0 4.0 6.0 7.0 9.0 10.0 12.0 13.0} {}} ../../lib/gaisler/ddr/ddr2spax_ahb.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddr2spax_ahb.vhd
+} {} {}} ../../lib/gaisler/ddr/ddr2spax_ahb.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/ddr/ddr2spax_ahb.vhd
 
 } {} {}} ../../lib/grlib/amba/defmst.vhd {1 {vcom -work grlib -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/grlib/amba/defmst.vhd
 

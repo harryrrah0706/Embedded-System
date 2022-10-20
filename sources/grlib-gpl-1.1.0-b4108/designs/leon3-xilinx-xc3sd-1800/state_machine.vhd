@@ -52,8 +52,11 @@ begin
           
       when FETCH =>
         
+        hready <= '0';
+        dmai.start <= '0';
         if dmao.ready = '1' then
           next_state <= IDLE;
+          hready <= '1';
         else
           next_state <= FETCH;
         end if;
@@ -75,36 +78,36 @@ begin
 	  
 	end process;
 	
-	state_conditions : process (current_state)
-	begin
-	  
-	  if current_state = IDLE then
-	    hready <= '1';
-	    dmai.start <= '0';
-	  end if;
-	  
-	  if current_state = FETCH then
-	    hready <= '0';
-	    dmai.start <= '0';
-	  end if;
-	  
-	end process;
+--	state_conditions : process (current_state)
+--	begin
+--	  
+--	  if current_state = IDLE then
+--	    hready <= '1';
+--	    dmai.start <= '0';
+--	  end if;
+--	  
+--	  if current_state = FETCH then
+--	    hready <= '0';
+--	    dmai.start <= '0';
+--	  end if;
+--	  
+--	end process;
 	
-	trans_conditions : process (htrans,dmao.ready)
-	begin
-	  
-	  if htrans = "10" then
-	    dmai.start <= '1';
-	    dmai.address <= haddr;
-	    dmai.wdata <= hwdata;
-	    dmai.write <= hwrite;
-	    dmai.size <= hsize;
-	  end if;
-	  
-	  if dmao.ready = '1' then
-	    hready <= '1';
-	  end if;
-	  
-	end process;
+--	trans_conditions : process (htrans,dmao.ready)
+--	begin
+--	  
+--	  if htrans = "10" then
+----	    dmai.start <= '1';
+--	    dmai.address <= haddr;
+--	    dmai.wdata <= hwdata;
+--	    dmai.write <= hwrite;
+--	    dmai.size <= hsize;
+--	  end if;
+--	  
+--	  if dmao.ready = '1' then
+--	    hready <= '1';
+--	  end if;
+--	  
+--	end process;
 	
 end structural;

@@ -41,7 +41,7 @@ begin
       
       when IDLE =>
         
-        hready <= '1';
+--        hready <= '1';
         if htrans = "10" then
           next_state <= FETCH;
         else
@@ -50,9 +50,9 @@ begin
        
       when FETCH =>
         
-        hready <= '0';
+--        hready <= '0';
         if dmao.ready = '1' then
-          hready <= '1';
+--          hready <= '1';
           next_state <= IDLE;
         else
           next_state <= FETCH;
@@ -79,27 +79,33 @@ begin
 	begin
 	  
 	  if current_state = IDLE then
---	    hready <= '1';
+	    hready <= '1';
 	    dmai.start <= '0';
 	  end if;
 	  
 	  if current_state = IDLE and htrans = "10" then
 	    dmai.start <= '1';
+	  end if;
+	  
+	  if current_state = FETCH then
+	    hready <= '0';
+	    dmai.start <= '0';
+	  end if;
+	  
+	  if current_state = FETCH and dmao.ready = '1' then
+	    hready <= '1';
+	  end if;
+	  
+	end process;
+	
+	establish_connection : process (clkm)
+	begin
+	  if rising_edge(clkm) then
 	    dmai.address <= haddr;
 	    dmai.wdata <= hwdata;
 	    dmai.write <= hwrite;
 	    dmai.size <= hsize;
 	  end if;
-	  
-	  if current_state = FETCH then
---	    hready <= '0';
-	    dmai.start <= '0';
-	  end if;
-	  
---	  if current_state = FETCH and dmao.ready = '1' then
---	    hready <= '1';
---	  end if;
-	  
 	end process;
 	
 end structural;

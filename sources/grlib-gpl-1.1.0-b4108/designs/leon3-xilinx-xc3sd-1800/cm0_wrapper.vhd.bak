@@ -75,20 +75,6 @@ architecture structural of cm0_wrapper is
   signal hwrite : std_ulogic;
   signal hrdata : std_logic_vector (31 downto 0);
   signal hready : std_ulogic;
-  signal hclk : std_ulogic;
-  signal hresetn : std_ulogic;
-  
-  signal hburst	: std_logic_vector(2 downto 0); 
-  signal hmastlock	: std_ulogic;                
-  signal hprot	: std_logic_vector(3 downto 0);     
-  signal hresp	: std_ulogic; 	    
-  signal nmi : std_ulogic;
-  signal irq : std_logic_vector(15 downto 0);
-  signal txev : std_ulogic;
-  signal rxev : std_ulogic;
-  signal lockup : std_ulogic;
-  signal sysresetreq : std_ulogic;
-  signal sleeping : std_ulogic;
   
 begin
 
@@ -97,9 +83,9 @@ begin
       clkm,
       rstn,
       haddr,
-      hburst,
-      hmastlock,
-      hprot,
+      open,
+      open,
+      open,
       hsize,
       htrans,
       hwdata,
@@ -129,9 +115,8 @@ begin
       hrdata,
       hready);
   
-  ahbmo.hburst <= hburst;
-  ahbmo.hlock <= hmastlock;
-  ahbmo.hprot <= hprot;
+  ahbmo.haddr <= haddr;
+  ahbmo.hwdata <= hwdata;
   
   
 end structural;

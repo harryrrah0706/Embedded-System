@@ -40,7 +40,7 @@ constant hconfig : ahb_config_type := (
   4 => ahb_membar(haddr, '1', '1', hmask), others => zero32);
 
 signal romdata : std_logic_vector(31 downto 0);
-signal addr : std_logic_vector(abits-1 downto 2);
+signal addr : std_logic_vector(31 downto 0);
 signal hsel, hready : std_ulogic;
 
 begin
@@ -55,7 +55,7 @@ begin
   reg : process (clk)
   begin
     if rising_edge(clk) then 
-      addr <= ahbsi.haddr(abits-1 downto 2);
+      addr <= ahbsi.haddr(31 downto 0);
     end if;
   end process;
 
@@ -131,7 +131,7 @@ begin
     when 16#00030# => romdata <= X"024B5B1C";
     when 16#00031# => romdata <= X"EEE70000";
     when 16#00032# => romdata <= X"5555AAAA";
-    when 16#00033# => romdata <= X"F0F0F0F0";
+    when 16#00033# => romdata <= X"0D0D0D0D";
     when 16#00034# => romdata <= X"754600F0";
     when 16#00035# => romdata <= X"23F8AE46";
     when 16#00036# => romdata <= X"05006946";

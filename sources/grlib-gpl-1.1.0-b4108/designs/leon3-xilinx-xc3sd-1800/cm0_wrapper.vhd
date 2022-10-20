@@ -50,9 +50,6 @@ architecture structural of cm0_wrapper is
       HRESETn : in std_logic;
       
       HADDR	: out std_logic_vector(31 downto 0); 	      -- address bus (byte)
-      HBURST	: out std_logic_vector(2 downto 0);       	-- burst type
-      HMASTLOCK	: out std_logic;                        -- locked access
-      HPROT	: out std_logic_vector(3 downto 0);        	-- protection control
       HSIZE	: out std_logic_vector(2 downto 0);        	-- transfer size
       HTRANS	: out std_logic_vector(1 downto 0);       	-- transfer type
       HWDATA	: out std_logic_vector(31 downto 0); 	     -- write data bus
@@ -60,7 +57,9 @@ architecture structural of cm0_wrapper is
       HRDATA	: in std_logic_vector(31 downto 0); 	      -- read data bus
       HREADY	: in std_logic;                            -- transfer done
       HRESP	: in std_logic; 	                           -- response type
-      
+      HBURST	: out std_logic_vector(2 downto 0);       	-- burst type
+      HMASTLOCK	: out std_logic;                        -- locked access
+      HPROT	: out std_logic_vector(3 downto 0);        	-- protection control
       NMI : in std_logic;
       IRQ : in std_logic_vector(15 downto 0);
       TXEV : out std_logic;
@@ -71,16 +70,15 @@ architecture structural of cm0_wrapper is
   end component;
   
   signal haddr : std_logic_vector (31 downto 0);
-  signal hsize :  std_logic_vector (2 downto 0);
+  signal hsize : std_logic_vector (2 downto 0);
   signal htrans : std_logic_vector (1 downto 0); 
   signal hwdata : std_logic_vector (31 downto 0);
   signal hwrite : std_logic;
   signal hrdata : std_logic_vector (31 downto 0);
   signal hready : std_logic;
-  
-  
   signal hclk : std_logic;
   signal hresetn : std_logic;
+  
   signal hburst	: std_logic_vector(2 downto 0); 
   signal hmastlock	: std_logic;                
   signal hprot	: std_logic_vector(3 downto 0);     
@@ -93,11 +91,30 @@ architecture structural of cm0_wrapper is
   signal sysresetreq : std_logic;
   signal sleeping : std_logic;
   
-  
 begin
   
   cortexm0 : CORTEXM0DS
-    port map(hclk,hresetn,haddr,hburst,hmastlock,hprot,hsize,htrans,hwdata,hwrite,hrdata,hready,hresp,nmi,irq,txev,rxev,lockup,sysresetreq,sleeping);
+    port map(
+      hclk,
+      hresetn,
+      haddr,
+      hsize,
+      htrans,
+      hwdata,
+      hwrite,
+      hrdata,
+      hready,
+      hresp => '0',
+      hburst => open,
+      hmastlock => open,
+      hprot => open,
+      nmi => '0',
+      irq => "0000000000000000",
+      txev => open,
+      rxev => '0',
+      lockup => open,
+      sysresetreq => open,
+      sleeping => open);
   
   ahblite_bridge : AHB_bridge
     port map(clkm,rstn,ahbmi,ahbmo,haddr,hsize,htrans,hwdata,hwrite,hrdata,hready);

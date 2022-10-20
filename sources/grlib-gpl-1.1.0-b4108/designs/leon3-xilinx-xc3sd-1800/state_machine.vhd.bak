@@ -13,15 +13,15 @@ use UNISIM.VComponents.all;
 entity state_machine is
   port(
     hwdata	: in std_logic_vector(AHBDW-1 downto 0); 	-- write data bus
-    hready	: out std_logic;                         -- transfer done
+    hready	: out std_ulogic;                         -- transfer done
     htrans	: in std_logic_vector(1 downto 0); 	      -- transfer type
     haddr	: in std_logic_vector(31 downto 0); 	      -- address bus (byte)
-    hwrite	: in std_logic;                         	-- read/write
+    hwrite	: in std_ulogic;                         	-- read/write
     hsize	: in std_logic_vector(2 downto 0);         -- transfer size
     dmai : out ahb_dma_in_type;
     dmao : in ahb_dma_out_type;
-    clkm : in std_logic;
-    rstn : in std_logic
+    clkm : in std_ulogic;
+    rstn : in std_ulogic
   );
 end entity;
 
@@ -42,21 +42,19 @@ begin
       when IDLE =>
         
         hready <= '1';
-        dmai.start <= '0';
         if htrans = "10" then
-          dmai.start <= '1';
+          hready <= '0';
           next_state <= FETCH;
         else
           next_state <= IDLE;
         end if;
-          
+       
       when FETCH =>
         
         hready <= '0';
-        dmai.start <= '0';
         if dmao.ready = '1' then
-          next_state <= IDLE;
           hready <= '1';
+          next_state <= IDLE;
         else
           next_state <= FETCH;
         end if;
@@ -68,46 +66,41 @@ begin
   state_register : process (clkm, rstn)	
   begin
     
-	  if rising_edge (clkm) then
-	   if rstn = '1' then
-	     current_state <= IDLE;
-		 else
+	  if rising_edge(clkm) then
+--	   if rstn = '1' then
+--	     current_state <= IDLE;
+--		 else
 			 current_state <= next_state;
-		 end if;	
+--		 end if;	
 	  end if;
 	  
 	end process;
 	
---	state_conditions : process (current_state)
---	begin
---	  
---	  if current_state = IDLE then
+	state_conditions : process (current_state,htrans,dmao.ready)
+	begin
+	  
+	  if current_state = IDLE then
 --	    hready <= '1';
---	    dmai.start <= '0';
---	  end if;
---	  
---	  if current_state = FETCH then
+	    dmai.start <= '0';
+	  end if;
+	  
+	  if current_state = IDLE and htrans = "10" then
+	    dmai.start <= '1';
+	    dmai.address <= haddr;
+	    dmai.wdata <= hwdata;
+	    dmai.write <= hwrite;
+	    dmai.size <= hsize;
+	  end if;
+	  
+	  if current_state = FETCH then
 --	    hready <= '0';
---	    dmai.start <= '0';
---	  end if;
---	  
---	end process;
-	
---	trans_conditions : process (htrans,dmao.ready)
---	begin
---	  
---	  if htrans = "10" then
-----	    dmai.start <= '1';
---	    dmai.address <= haddr;
---	    dmai.wdata <= hwdata;
---	    dmai.write <= hwrite;
---	    dmai.size <= hsize;
---	  end if;
---	  
---	  if dmao.ready = '1' then
+	    dmai.start <= '0';
+	  end if;
+	  
+--	  if current_state = FETCH and dmao.ready = '1' then
 --	    hready <= '1';
 --	  end if;
---	  
---	end process;
+	  
+	end process;
 	
 end structural;

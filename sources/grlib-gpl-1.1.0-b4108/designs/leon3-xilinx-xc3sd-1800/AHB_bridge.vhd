@@ -15,8 +15,8 @@ use UNISIM.VComponents.all;
 entity AHB_bridge is
   port(
  -- Clock and Reset -----------------
-    clkm : in std_logic;
-    rstn : in std_logic;
+    clkm : in std_ulogic;
+    rstn : in std_ulogic;
  -- AHB Master records --------------
     ahbmi : in ahb_mst_in_type;
     ahbmo : out ahb_mst_out_type;
@@ -25,18 +25,15 @@ entity AHB_bridge is
     hsize : in std_logic_vector (2 downto 0);          -- AHB size: byte, half-word or word
     htrans : in std_logic_vector (1 downto 0);         -- AHB transfer: non-sequential only
     hwdata : in std_logic_vector (31 downto 0);        -- AHB write-data
-    hwrite : in std_logic;                             -- AHB write control
+    hwrite : in std_ulogic;                             -- AHB write control
     hrdata : out std_logic_vector (31 downto 0);       -- AHB read-data
-    hready : out std_logic                             -- AHB stall signal
+    hready : out std_ulogic                             -- AHB stall signal
   );
 end;
 
 
 
 architecture structural of AHB_bridge is
-  
-  signal dmai : ahb_dma_in_type;
-  signal dmao : ahb_dma_out_type;
   
 --  signal hburst	: std_logic_vector(2 downto 0); 
 --  signal hmastlock	: std_logic;                
@@ -61,8 +58,8 @@ architecture structural of AHB_bridge is
       hsize	: in std_logic_vector(2 downto 0);         -- transfer size
       dmai : out ahb_dma_in_type;
       dmao : in ahb_dma_out_type;
-      clkm : in std_logic;
-      rstn : in std_logic
+      clkm : in std_ulogic;
+      rstn : in std_ulogic
     );
   end component;
     
@@ -78,8 +75,8 @@ architecture structural of AHB_bridge is
       incaddr : integer := 0
     ); 
     port (
-      rst  : in  std_logic;
-      clk  : in  std_logic;
+      rst  : in  std_ulogic;
+      clk  : in  std_ulogic;
       dmai : in ahb_dma_in_type;
       dmao : out ahb_dma_out_type;
       ahbi : in  ahb_mst_in_type;
@@ -94,6 +91,9 @@ architecture structural of AHB_bridge is
       hrdata	: out std_logic_vector(AHBDW-1 downto 0)
     );
   end component;
+
+  signal dmai : ahb_dma_in_type;
+  signal dmao : ahb_dma_out_type;
 
 begin
 
@@ -111,15 +111,42 @@ begin
   
 --instantiate state_machine component and make the connections
   state_machine_1 : state_machine
-    port map(hwdata,hready,htrans,haddr,hwrite,hsize,dmai,dmao,clkm,rstn);
+    port map(
+      hwdata,
+      hready,
+      htrans,
+      haddr,
+      hwrite,
+      hsize,
+      dmai,
+      dmao,
+      clkm,
+      rstn);
       
 --instantiate the ahbmst component and make the connections 
   ahbmst_1 : ahbmst
-    generic map(0,0,VENDOR_GAISLER,0,0,3,0)
-    port map(rstn,clkm,dmai,dmao,ahbmi,ahbmo);
+    generic map(
+      0,
+      0,
+      VENDOR_GAISLER,
+      0,
+      0,
+      3,
+      0)
+    port map(
+      rstn,
+      clkm,
+      dmai,
+      dmao,
+      ahbmi,
+      ahbmo);
       
 --instantiate the data_swapper component and make the connections
   data_swapper_1 : data_swapper
-    port map(dmao,hrdata);
-      
+    port map(
+      dmao,
+      hrdata);
+  
+  
+  
 end structural;

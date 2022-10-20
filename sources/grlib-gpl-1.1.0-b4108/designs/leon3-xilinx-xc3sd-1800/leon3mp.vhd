@@ -128,16 +128,6 @@ end;
 
 architecture rtl of leon3mp is
   
-  component cm0_wrapper
-    port(
- -- Clock and Reset -----------------
-    clkm : in std_logic;
-    rstn : in std_logic;
- -- AHB Master records --------------
-    ahbmi : in ahb_mst_in_type;
-    ahbmo : out ahb_mst_out_type);
-  end component;
-  
   signal vcc : std_logic;
   signal gnd : std_logic;
 
@@ -219,6 +209,17 @@ architecture rtl of leon3mp is
 
   constant BOARD_FREQ : integer := 125000;                                -- input frequency in KHz
   constant CPU_FREQ   : integer := BOARD_FREQ * CFG_CLKMUL / CFG_CLKDIV;  -- cpu frequency in KHz
+  
+  component cm0_wrapper
+    port(
+ -- Clock and Reset -----------------
+    clkm : in std_logic;
+    rstn : in std_logic;
+ -- AHB Master records --------------
+    ahbmi : in ahb_mst_in_type;
+    ahbmo : out ahb_mst_out_type);
+  end component;
+  
 begin
 
 ----------------------------------------------------------------------
@@ -623,7 +624,7 @@ begin
 --- ARM Cortex-M0 Processor -----------------------------------------
 ----------------------------------------------------------------------
   cm0gen : if CFG_CM0 = 1 generate
-    u1 : cm0_wrapper
+    wrapper : cm0_wrapper
     port map (clkm,rstn,ahbmi,ahbmo(0));
   end generate;
   

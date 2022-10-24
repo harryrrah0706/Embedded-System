@@ -129,6 +129,4 @@ begin
     end if;
   end process;
   
---  cm0_led <= LED_Group_13;
-  
 end structural;

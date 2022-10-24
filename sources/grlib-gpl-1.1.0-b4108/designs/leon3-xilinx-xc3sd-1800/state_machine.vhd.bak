@@ -90,6 +90,8 @@ begin
 	    dmai.start <= '0';
 	    if dmao.ready = '1' then
 	      hready <= '1';
+	    else
+	      hready <= '0';
 	    end if;
 	  end if;
 	  

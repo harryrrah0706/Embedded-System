@@ -80,6 +80,8 @@ begin
 	    dmai.start <= '0';
 	    if htrans = "10" then
 	      dmai.start <= '1';
+	    else
+	      dmai.start <= '0';
 	    end if;
 	  end if;
 	  
@@ -88,6 +90,8 @@ begin
 	    dmai.start <= '0';
 	    if dmao.ready = '1' then
 	      hready <= '1';
+	    else
+	      hready <= '0';
 	    end if;
 	  end if;
 	  

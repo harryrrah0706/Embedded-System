@@ -122,7 +122,8 @@ entity leon3mp is
     spi_mosi  : out   std_ulogic;
 
     -- Output signals to LEDs
-    led       : out   std_logic_vector(2 downto 0)
+    led       : out   std_logic_vector(2 downto 0);
+    cm0_led   : out   std_ulogic
     );
 end;
 
@@ -217,7 +218,8 @@ architecture rtl of leon3mp is
     rstn : in std_logic;
  -- AHB Master records --------------
     ahbmi : in ahb_mst_in_type;
-    ahbmo : out ahb_mst_out_type);
+    ahbmo : out ahb_mst_out_type;
+    cm0_led : out std_ulogic);
   end component;
   
 begin
@@ -625,7 +627,7 @@ begin
 ----------------------------------------------------------------------
   cm0gen : if CFG_CM0 = 1 generate
     wrapper : cm0_wrapper
-    port map (clkm,rstn,ahbmi,ahbmo(0));
+    port map (clkm,rstn,ahbmi,ahbmo(0),cm0_led);
   end generate;
   
 end rtl;

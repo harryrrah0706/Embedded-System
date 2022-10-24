@@ -122,7 +122,8 @@ entity leon3mp is
     spi_mosi  : out   std_ulogic;
 
     -- Output signals to LEDs
-    led       : out   std_logic_vector(2 downto 0)
+    led       : out   std_logic_vector(2 downto 0);
+    cm0_led   : out   std_ulogic
     );
 end;
 
@@ -217,8 +218,11 @@ architecture rtl of leon3mp is
     rstn : in std_logic;
  -- AHB Master records --------------
     ahbmi : in ahb_mst_in_type;
-    ahbmo : out ahb_mst_out_type);
+    ahbmo : out ahb_mst_out_type;
+    cm0_led : out std_ulogic);
   end component;
+  
+  signal cm0_led : std_ulogic;
   
 begin
 
@@ -625,22 +629,7 @@ begin
 ----------------------------------------------------------------------
   cm0gen : if CFG_CM0 = 1 generate
     wrapper : cm0_wrapper
-    port map (clkm,rstn,ahbmi,ahbmo(0));
---    error_pad : odpad generic map (tech => padtech) port map (errorn, dbgo(0).error);
-
-    -- LEON3 Debug Support Unit    
-    dsugen : if CFG_DSU = 1 generate
-      dsu0 : dsu3
-        generic map (hindex => 2, haddr => 16#900#, hmask => 16#F00#,
-                     ncpu   => CFG_NCPU, tbits => 30, tech => memtech, irq => 0, kbytes => CFG_ATBSZ)
-        port map (rstn, clkm, ahbmi, ahbsi, ahbso(2), dbgo, dbgi, dsui, dsuo);
-
-      dsubre_pad : inpad generic map (tech  => padtech) port map (dsubre, dsui.break);
-
-      dsui.enable <= '1';
-      led(2) <= dsuo.active;
-    end generate;
+    port map (clkm,rstn,ahbmi,ahbmo(0),cm0_led);
   end generate;
-  
   
 end rtl;

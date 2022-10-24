@@ -19,7 +19,8 @@ entity cm0_wrapper is
     rstn : in std_logic;
  -- AHB Master records --------------
     ahbmi : in ahb_mst_in_type;
-    ahbmo : out ahb_mst_out_type);
+    ahbmo : out ahb_mst_out_type;
+    cm0_led : out std_ulogic);
 end;
 
 
@@ -121,9 +122,9 @@ begin
   begin
     if falling_edge(clkm) then
       if hrdata(31 downto 0) = "00001101000011010000110100001101" then
-        LED_Group_13 <= '1';
+        cm0_led <= '1';
       else
-        LED_Group_13 <= '0';
+        cm0_led <= '0';
       end if;
     end if;
   end process;

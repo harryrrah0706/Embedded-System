@@ -133,6 +133,19 @@ architecture behav of testbench is
   signal led       : std_logic_vector(2 downto 0);
 
   signal brdyn     : std_ulogic;
+  
+  component cm0_wrapper
+    port(
+ -- Clock and Reset -----------------
+    clkm : in std_logic;
+    rstn : in std_logic;
+ -- AHB Master records --------------
+    ahbmi : in ahb_mst_in_type;
+    ahbmo : out ahb_mst_out_type;
+    cm0_led : out std_ulogic);
+  end component;
+  
+  signal cmo_led : std_ulogic;
 begin
   -- clock and reset
   clk        <= not clk after ct * 1 ns;
@@ -214,7 +227,8 @@ begin
       spi_mosi  => spi_mosi,
 
       -- Output signals for LEDs
-      led       => led
+      led       => led,
+      cm0_led   => cm0_led
       );
 
   ddr2mem : if (CFG_DDR2SP /= 0) generate 
@@ -257,12 +271,12 @@ begin
       port map (spi_clk, spi_mosi, data(24), spi_sel_n);
   end generate spimem0;
 
-  error <= '-';                         -- ERROR pull-up
+  error <= 'H';                         -- ERROR pull-up
 
   iuerr : process
   begin
     wait for 5 us;
-    assert (to_X01(error) = '-')
+    assert (to_X01(error) = '1')
       report "*** IU in error mode, simulation halted ***"
       severity failure;
   end process;
@@ -310,6 +324,11 @@ begin
     dsucfg(dsutx, dsurx);
     wait;
   end process;
+  
+  cm0gen : if CFG_CM0 = 1 generate
+    wrapper : cm0_wrapper
+    port map (clkm,rstn,ahbmi,ahbmo(0),cmo_led);
+  end generate;
 end;
 
 

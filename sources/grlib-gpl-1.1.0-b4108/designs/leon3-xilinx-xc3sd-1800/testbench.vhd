@@ -131,8 +131,11 @@ architecture behav of testbench is
 
   -- Output signals for LEDs
   signal led       : std_logic_vector(2 downto 0);
+  signal cm0_led   : std_ulogic;
 
   signal brdyn     : std_ulogic;
+  
+   
 begin
   -- clock and reset
   clk        <= not clk after ct * 1 ns;
@@ -214,7 +217,8 @@ begin
       spi_mosi  => spi_mosi,
 
       -- Output signals for LEDs
-      led       => led
+      led       => led,
+      cm0_led   => cm0_led
       );
 
   ddr2mem : if (CFG_DDR2SP /= 0) generate 

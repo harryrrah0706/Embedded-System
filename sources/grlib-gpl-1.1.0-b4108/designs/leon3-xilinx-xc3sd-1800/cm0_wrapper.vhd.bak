@@ -77,7 +77,6 @@ architecture structural of cm0_wrapper is
   signal hwrite : std_ulogic;
   signal hrdata : std_logic_vector (31 downto 0);
   signal hready : std_ulogic;
-  signal LED_Group_13 : std_ulogic;
   
 begin
 

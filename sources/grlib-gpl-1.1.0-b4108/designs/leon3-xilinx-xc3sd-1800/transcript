@@ -1,4 +1,3 @@
-# Compile of state_machine.vhd was successful.
 # Compile of cm0_wrapper.vhd was successful.
 vsim -gui work.testbench
 # vsim -gui work.testbench 
@@ -490,7 +489,8 @@ add wave -position insertpoint  \
 sim:/testbench/cm0_led
 add wave -position insertpoint sim:/testbench/d3/cm0gen/wrapper/*
 add wave -position insertpoint sim:/testbench/d3/cm0gen/wrapper/cortexm0/*
-run 1000 us
+add wave -position insertpoint sim:/testbench/d3/cm0gen/wrapper/ahblite_bridge/state_machine_1/*
+run 500 us
 # LEON3 Demonstration design for Xilinx Spartan3A DSP 1800A board
 # GRLIB Version 1.1.0, build 4108
 # Target technology: spartan3  ,  memory library: spartan3  

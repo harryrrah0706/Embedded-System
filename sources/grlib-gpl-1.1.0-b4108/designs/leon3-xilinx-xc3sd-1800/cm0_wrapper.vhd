@@ -117,7 +117,7 @@ begin
       hrdata,
       hready);
   
-  detection : process (hrdata,clkm)
+  detection : process (clkm)
   begin
     if falling_edge(clkm) then
       if hrdata(31 downto 0) = "00001101000011010000110100001101" then

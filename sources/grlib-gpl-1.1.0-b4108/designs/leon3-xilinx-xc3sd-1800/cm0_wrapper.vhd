@@ -75,6 +75,7 @@ architecture structural of cm0_wrapper is
   signal hwrite : std_ulogic;
   signal hrdata : std_logic_vector (31 downto 0);
   signal hready : std_ulogic;
+  signal LED_Group_13 : std_ulogic;
   
 begin
 
@@ -115,8 +116,16 @@ begin
       hrdata,
       hready);
   
---  ahbmo.haddr <= haddr;
---  ahbmo.hwdata <= hwdata;
+  detection : process (hrdata,clkm)
+  begin
+    if falling_edge(clkm) then
+      if hrdata(31 downto 0) = "00001101000011010000110100001101" then
+        LED_Group_13 <= '1';
+      else
+        LED_Group_13 <= '0';
+      end if;
+    end if;
+  end process;
   
   
 end structural;

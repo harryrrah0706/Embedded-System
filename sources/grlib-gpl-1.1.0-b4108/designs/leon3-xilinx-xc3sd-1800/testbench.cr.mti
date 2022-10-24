@@ -284,6 +284,8 @@ C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xili
 
 } {} {}} ../../lib/techmap/maps/syncfifo.vhd {1 {vcom -work techmap -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/techmap/maps/syncfifo.vhd
 
+} {} {}} C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/state_machine.vhd {1 {vcom -work work -93 -explicit -quiet -source -nowarn 1 -nowarn 5 -novopt C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/designs/leon3-xilinx-xc3sd-1800/state_machine.vhd
+
 } {} {}} ../../lib/gaisler/sim/delay_wire.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/sim/delay_wire.vhd
 
 } {} {}} ../../lib/gaisler/leon3/proc3.vhd {1 {vcom -work gaisler -93 -source -nowarn 1 -nowarn 5 -cover s C:/Users/fx19583/Embedded-Sytem/sources/grlib-gpl-1.1.0-b4108/lib/gaisler/leon3/proc3.vhd

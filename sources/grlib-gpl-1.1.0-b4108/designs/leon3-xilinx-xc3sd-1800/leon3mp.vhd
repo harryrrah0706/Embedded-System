@@ -626,21 +626,6 @@ begin
   cm0gen : if CFG_CM0 = 1 generate
     wrapper : cm0_wrapper
     port map (clkm,rstn,ahbmi,ahbmo(0));
---    error_pad : odpad generic map (tech => padtech) port map (errorn, dbgo(0).error);
-
-    -- LEON3 Debug Support Unit    
-    dsugen : if CFG_DSU = 1 generate
-      dsu0 : dsu3
-        generic map (hindex => 2, haddr => 16#900#, hmask => 16#F00#,
-                     ncpu   => CFG_NCPU, tbits => 30, tech => memtech, irq => 0, kbytes => CFG_ATBSZ)
-        port map (rstn, clkm, ahbmi, ahbsi, ahbso(2), dbgo, dbgi, dsui, dsuo);
-
-      dsubre_pad : inpad generic map (tech  => padtech) port map (dsubre, dsui.break);
-
-      dsui.enable <= '1';
-      led(2) <= dsuo.active;
-    end generate;
   end generate;
-  
   
 end rtl;

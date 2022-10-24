@@ -626,7 +626,7 @@ begin
   cm0gen : if CFG_CM0 = 1 generate
     wrapper : cm0_wrapper
     port map (clkm,rstn,ahbmi,ahbmo(0));
-    error_pad : odpad generic map (tech => padtech) port map (errorn, dbgo(0).error);
+--    error_pad : odpad generic map (tech => padtech) port map (errorn, dbgo(0).error);
 
     -- LEON3 Debug Support Unit    
     dsugen : if CFG_DSU = 1 generate

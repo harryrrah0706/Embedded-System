@@ -35,18 +35,6 @@ end;
 
 architecture structural of AHB_bridge is
   
---  signal hburst	: std_logic_vector(2 downto 0); 
---  signal hmastlock	: std_logic;                
---  signal hprot	: std_logic_vector(3 downto 0);     
---  signal hresp	: std_logic; 	    
---  signal nmi : std_logic;
---  signal irq : std_logic_vector(15 downto 0);
---  signal txev : std_logic;
---  signal rxev : std_logic;
---  signal lockup : std_logic;
---  signal sysresetreq : std_logic;
---  signal sleeping : std_logic;
-  
 --declare a component for state_machine
   component state_machine
     port(
@@ -96,18 +84,6 @@ architecture structural of AHB_bridge is
   signal dmao : ahb_dma_out_type;
 
 begin
-
---  hburst <= open;
---  hmastlock <= open;
---  hprot <= open;
---  hresp <= '0';
---  nmi <= '0';
---  irq <= (others => '0');
---  txev <= open;
---  rxev <= '0';
---  lockup <= open;
---  sysresetreq <= open;
---  sleeping <= open;
   
 --instantiate state_machine component and make the connections
   state_machine_1 : state_machine
@@ -146,7 +122,5 @@ begin
     port map(
       dmao,
       hrdata);
-  
-  
   
 end structural;

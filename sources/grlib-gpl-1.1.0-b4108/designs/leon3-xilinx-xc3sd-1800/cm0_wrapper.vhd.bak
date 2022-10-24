@@ -118,7 +118,7 @@ begin
   
   detection : process (hrdata,clkm)
   begin
-    if rising_edge(clkm) then
+    if falling_edge(clkm) then
       if hrdata(31 downto 0) = "00001101000011010000110100001101" then
         LED_Group_13 <= '1';
       else
@@ -126,6 +126,5 @@ begin
       end if;
     end if;
   end process;
-  
   
 end structural;

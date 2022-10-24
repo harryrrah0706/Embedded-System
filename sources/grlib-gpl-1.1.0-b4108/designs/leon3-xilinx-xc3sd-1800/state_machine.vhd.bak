@@ -10,6 +10,8 @@ use gaisler.misc.all;
 library UNISIM;
 use UNISIM.VComponents.all;
 
+
+
 entity state_machine is
   port(
     hwdata	: in std_logic_vector(AHBDW-1 downto 0); 	-- write data bus
@@ -24,6 +26,8 @@ entity state_machine is
     rstn : in std_ulogic
   );
 end entity;
+
+
 
 architecture structural of state_machine is
   
@@ -109,9 +113,9 @@ begin
 	    end if;
 	  end if;
 	  
-	  if current_state = FETCH and dmao.ready = '1' then
-	    hready <= '1';
-	  end if;
+--	  if current_state = FETCH and dmao.ready = '1' then
+--	    hready <= '1';
+--	  end if;
 	  
 	end process;
 	

@@ -11,6 +11,7 @@ library UNISIM;
 use UNISIM.VComponents.all;
 
 
+
 entity cm0_wrapper is
   port(
  -- Clock and Reset -----------------
@@ -126,6 +127,5 @@ begin
       end if;
     end if;
   end process;
-  
   
 end structural;

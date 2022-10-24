@@ -23,10 +23,9 @@ architecture structural of data_swapper is
   
 begin
   
-  swap : process (dmao)
+  swap : process (dmao.rdata)
     variable temp : std_logic_vector(31 downto 0);
   begin
-    if dmao.ready = '1' then
       temp(7 downto 0) := dmao.rdata(31 downto 24);
       temp(15 downto 8) := dmao.rdata(23 downto 16);
       temp(23 downto 16) := dmao.rdata(15 downto 8);
@@ -36,7 +35,6 @@ begin
 --      hrdata(15 downto 8) <= dmao.rdata(23 downto 16);
 --      hrdata(23 downto 16) <= dmao.rdata(15 downto 8);
 --      hrdata(31 downto 24) <= dmao.rdata(7 downto 0);
-    end if;
   end process;
   
 end structural;

@@ -34,29 +34,44 @@ architecture structural of state_machine is
   
 begin
   
-  state_transition : process(htrans,dmao.ready)
+  state_transition : process(dmao.ready,htrans,current_state)
   begin
     
     case current_state is
       
       when IDLE =>
-        
 --        hready <= '1';
+--        dmai.start <= '0';
         if htrans = "10" then
+--          hready <= '0';
+--          dmai.start <= '1';
           next_state <= FETCH;
         else
           next_state <= IDLE;
         end if;
        
       when FETCH =>
-        
 --        hready <= '0';
+--        dmai.start <= '0';
         if dmao.ready = '1' then
 --          hready <= '1';
           next_state <= IDLE;
         else
           next_state <= FETCH;
         end if;
+        
+        
+--        next_state <= WAITING;
+        
+--      when WAITING =>
+--        
+--        if dmao.ready = '1' then
+--          next_state <= IDLE;
+--        else
+--          next_state <= WAITING;
+--        end if;
+        
+        
           
     end case;
     
@@ -66,11 +81,11 @@ begin
   begin
     
 	  if rising_edge(clkm) then
---	   if rstn = '1' then
---	     current_state <= IDLE;
---		 else
+	   if rstn = '0' then
+	     current_state <= IDLE;
+		 else
 			 current_state <= next_state;
---		 end if;	
+		 end if;	
 	  end if;
 	  
 	end process;
@@ -81,31 +96,31 @@ begin
 	  if current_state = IDLE then
 	    hready <= '1';
 	    dmai.start <= '0';
-	  end if;
-	  
-	  if current_state = IDLE and htrans = "10" then
-	    dmai.start <= '1';
+	    if htrans = "10" then
+	      dmai.start <= '1';
+	    end if;
 	  end if;
 	  
 	  if current_state = FETCH then
 	    hready <= '0';
 	    dmai.start <= '0';
+	    if dmao.ready = '1' then
+	      hready <= '1';
+	    end if;
 	  end if;
 	  
-	  if current_state = FETCH and dmao.ready = '1' then
-	    hready <= '1';
-	  end if;
+--	  if current_state = FETCH and dmao.ready = '1' then
+--	    hready <= '1';
+--	  end if;
 	  
 	end process;
 	
-	establish_connection : process (clkm)
-	begin
-	  if rising_edge(clkm) then
+      dmai.burst <= '0';
+      dmai.irq <= '0';
+      dmai.busy <= '0';
 	    dmai.address <= haddr;
 	    dmai.wdata <= hwdata;
 	    dmai.write <= hwrite;
 	    dmai.size <= hsize;
-	  end if;
-	end process;
 	
 end structural;

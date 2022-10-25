@@ -80,16 +80,12 @@ begin
 	    dmai.start <= '0';
 	    if htrans = "10" then
 	      dmai.start <= '1';
-	    else
-	      dmai.start <= '0';
 	    end if;
 	  elsif current_state = FETCH then
 	    hready <= '0';
 	    dmai.start <= '0';
 	    if dmao.ready = '1' then
 	      hready <= '1';
-	    else
-	      hready <= '0';
 	    end if;
 	  else
 	    hready <= '1';
@@ -100,9 +96,9 @@ begin
   dmai.burst <= '0';
   dmai.irq <= '0';
   dmai.busy <= '0';
-	dmai.address <= haddr;
-	dmai.wdata <= hwdata;
-	dmai.write <= hwrite;
-	dmai.size <= hsize;
+  dmai.address <= haddr;
+  dmai.wdata <= hwdata;
+  dmai.write <= hwrite;
+  dmai.size <= hsize;
 	
 end structural;

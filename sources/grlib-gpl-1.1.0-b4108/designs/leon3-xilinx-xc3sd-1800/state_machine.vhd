@@ -91,6 +91,8 @@ begin
 	    else
 	      hready <= '0';
 	    end if;
+	  else
+	    hready <= '1';
 	  end if;
 	  
 	end process;

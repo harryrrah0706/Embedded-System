@@ -83,9 +83,7 @@ begin
 	    else
 	      dmai.start <= '0';
 	    end if;
-	  end if;
-	  
-	  if current_state = FETCH then
+	  elsif current_state = FETCH then
 	    hready <= '0';
 	    dmai.start <= '0';
 	    if dmao.ready = '1' then

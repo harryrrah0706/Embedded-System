@@ -219,6 +219,7 @@ architecture rtl of leon3mp is
  -- AHB Master records --------------
     ahbmi : in ahb_mst_in_type;
     ahbmo : out ahb_mst_out_type;
+ -- LED signal ----------------------
     cm0_led : out std_ulogic);
   end component;
   

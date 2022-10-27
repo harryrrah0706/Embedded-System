@@ -14,16 +14,16 @@ use UNISIM.VComponents.all;
 
 entity state_machine is
   port(
-    hwdata	: in std_logic_vector(AHBDW-1 downto 0); 	-- write data bus
-    hready	: out std_ulogic;                         -- transfer done
-    htrans	: in std_logic_vector(1 downto 0); 	      -- transfer type
-    haddr	: in std_logic_vector(31 downto 0); 	      -- address bus (byte)
-    hwrite	: in std_ulogic;                         	-- read/write
-    hsize	: in std_logic_vector(2 downto 0);         -- transfer size
-    dmai : out ahb_dma_in_type;
-    dmao : in ahb_dma_out_type;
-    clkm : in std_ulogic;
-    rstn : in std_ulogic
+    hwdata	: in std_logic_vector(AHBDW-1 downto 0);
+    hready	: out std_ulogic;
+    htrans	: in std_logic_vector(1 downto 0);
+    haddr	 : in std_logic_vector(31 downto 0);
+    hwrite	: in std_ulogic;
+    hsize	 : in std_logic_vector(2 downto 0);
+    dmai   : out ahb_dma_in_type;
+    dmao   : in ahb_dma_out_type;
+    clkm   : in std_ulogic;
+    rstn   : in std_ulogic
   );
 end entity;
 
@@ -34,7 +34,7 @@ architecture structural of state_machine is
   type state_type is (IDLE,FETCH);
   
   signal current_state : state_type;
-  signal next_state : state_type;
+  signal next_state    : state_type;
   
 begin
   

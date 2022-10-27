@@ -222,8 +222,6 @@ architecture rtl of leon3mp is
     cm0_led : out std_ulogic);
   end component;
   
-  signal cm0_led : std_ulogic;
-  
 begin
 
 ----------------------------------------------------------------------

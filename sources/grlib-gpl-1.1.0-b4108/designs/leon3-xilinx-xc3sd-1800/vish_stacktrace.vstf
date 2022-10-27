@@ -1,0 +1,16 @@
+# Current time Thu Oct 27 20:50:30 2022
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.1b"
+# Version = "2012.04"
+# Date = "Apr 27 2012"
+# Platform = win64
+
+Exception c0000005 has occurred at address 6fa78415. Traceback:
+# 0    0x6fa78415: 'strspn + 0x59'
+# 1    0x4006ea3a: '<unknown (@0x4006ea3a)>'
+# 2    0x00000001: '<unknown (@0x1)>'
+# 3    0x121645d0: '<unknown (@0x121645d0)>'
+StackWalk failed 487
+# End of Stack Trace
+

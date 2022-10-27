@@ -51,17 +51,17 @@ architecture structural of cm0_wrapper is
     port(
       hclk : in std_ulogic;
       hresetn : in std_ulogic;
-      haddr	: out std_logic_vector(31 downto 0); 	      -- address bus (byte)
-      hburst	: out std_logic_vector(2 downto 0);       	-- burst type
+      haddr	: out std_logic_vector(31 downto 0);        -- address bus (byte)
+      hburst	: out std_logic_vector(2 downto 0);        -- burst type
       hmastlock	: out std_ulogic;                       -- locked access
-      hprot	: out std_logic_vector(3 downto 0);        	-- protection control
-      hsize	: out std_logic_vector(2 downto 0);        	-- transfer size
-      htrans	: out std_logic_vector(1 downto 0);       	-- transfer type
-      hwdata	: out std_logic_vector(31 downto 0); 	     -- write data bus
+      hprot	: out std_logic_vector(3 downto 0);         -- protection control
+      hsize	: out std_logic_vector(2 downto 0);         -- transfer size
+      htrans	: out std_logic_vector(1 downto 0);        -- transfer type
+      hwdata	: out std_logic_vector(31 downto 0);       -- write data bus
       hwrite	: out std_ulogic;                          -- read/write
-      hrdata	: in std_logic_vector(31 downto 0); 	      -- read data bus
+      hrdata	: in std_logic_vector(31 downto 0);        -- read data bus
       hready	: in std_ulogic;                           -- transfer done
-      hresp	: in std_ulogic; 	                          -- response type
+      hresp	: in std_ulogic;                            -- response type
       nmi : in std_ulogic;
       irq : in std_logic_vector(15 downto 0);
       txev : out std_ulogic;

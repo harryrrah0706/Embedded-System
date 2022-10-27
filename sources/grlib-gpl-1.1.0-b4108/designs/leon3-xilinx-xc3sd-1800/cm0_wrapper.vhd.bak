@@ -90,7 +90,7 @@ begin
   ahblite_bridge : AHB_bridge
     port map(clkm,rstn,ahbmi,ahbmo,haddr,hsize,htrans,hwdata,hwrite,hrdata,hready);
 
--- Set a cm0_led connected to testbench to blink when group number 13 is detected.
+-- Set a cm0_led connected to testbench to blink when group number 13 is detected
   detection : process (clkm)
   begin
     if falling_edge(clkm) then

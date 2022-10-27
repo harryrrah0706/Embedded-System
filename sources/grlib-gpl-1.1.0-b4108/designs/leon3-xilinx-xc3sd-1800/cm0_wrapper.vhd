@@ -27,6 +27,7 @@ end;
 
 architecture structural of cm0_wrapper is
   
+-- Declare a component for the bridge
   component AHB_bridge
     port(
  -- Clock and Reset -----------------
@@ -40,27 +41,27 @@ architecture structural of cm0_wrapper is
       hsize : in std_logic_vector (2 downto 0);         -- AHB size: byte, half-word or word
       htrans : in std_logic_vector (1 downto 0);        -- AHB transfer: non-sequential only
       hwdata : in std_logic_vector (31 downto 0);       -- AHB write-data
-      hwrite : in std_ulogic;                            -- AHB write control
+      hwrite : in std_ulogic;                           -- AHB write control
       hrdata : out std_logic_vector (31 downto 0);      -- AHB read-data
-      hready : out std_ulogic);                          -- AHB stall signal
+      hready : out std_ulogic);                         -- AHB stall signal
   end component;
-    
+
+-- Declare a component for CortexM0
   component CORTEXM0DS
     port(
       hclk : in std_ulogic;
       hresetn : in std_ulogic;
-      
       haddr	: out std_logic_vector(31 downto 0); 	      -- address bus (byte)
       hburst	: out std_logic_vector(2 downto 0);       	-- burst type
-      hmastlock	: out std_ulogic;                        -- locked access
+      hmastlock	: out std_ulogic;                       -- locked access
       hprot	: out std_logic_vector(3 downto 0);        	-- protection control
       hsize	: out std_logic_vector(2 downto 0);        	-- transfer size
       htrans	: out std_logic_vector(1 downto 0);       	-- transfer type
       hwdata	: out std_logic_vector(31 downto 0); 	     -- write data bus
-      hwrite	: out std_ulogic;                          	-- read/write
+      hwrite	: out std_ulogic;                          -- read/write
       hrdata	: in std_logic_vector(31 downto 0); 	      -- read data bus
-      hready	: in std_ulogic;                            -- transfer done
-      hresp	: in std_ulogic; 	                           -- response type
+      hready	: in std_ulogic;                           -- transfer done
+      hresp	: in std_ulogic; 	                          -- response type
       nmi : in std_ulogic;
       irq : in std_logic_vector(15 downto 0);
       txev : out std_ulogic;
@@ -80,43 +81,16 @@ architecture structural of cm0_wrapper is
   
 begin
 
+-- Instantiate the CortexM0 component and make the connections
   cortexm0 : CORTEXM0DS
-    port map(
-      clkm,
-      rstn,
-      haddr,
-      open,
-      open,
-      open,
-      hsize,
-      htrans,
-      hwdata,
-      hwrite,
-      hrdata,
-      hready,
-      '0',
-      '0',
-      "0000000000000000",
-      open,
-      '0',
-      open,
-      open,
-      open);
-  
+    port map(clkm,rstn,haddr,open,open,open,hsize,htrans,hwdata,hwrite,hrdata,hready,
+      '0','0',"0000000000000000",open,'0',open,open,open);
+
+-- Instantiate the bridge component and make the connections
   ahblite_bridge : AHB_bridge
-    port map(
-      clkm,
-      rstn,
-      ahbmi,
-      ahbmo,
-      haddr,
-      hsize,
-      htrans,
-      hwdata,
-      hwrite,
-      hrdata,
-      hready);
-  
+    port map(clkm,rstn,ahbmi,ahbmo,haddr,hsize,htrans,hwdata,hwrite,hrdata,hready);
+
+-- Set a cm0_led connected to testbench to blink when group number 13 is detected
   detection : process (clkm)
   begin
     if falling_edge(clkm) then

@@ -38,6 +38,16 @@ architecture structural of state_machine is
   
 begin
   
+-- Make the connections
+  dmai.burst <= '0';
+  dmai.irq <= '0';
+  dmai.busy <= '0';
+  dmai.address <= haddr;
+  dmai.wdata <= hwdata;
+  dmai.write <= hwrite;
+  dmai.size <= hsize;
+  
+-- State machine with two states (IDLE and FETCH) that is triggered by HTRANS and DMAO.READY
   state_transition : process(dmao.ready,htrans,current_state)
   begin
     
@@ -64,7 +74,8 @@ begin
     end case;
     
   end process;
-  
+
+-- State register process to change from current state to next state
   state_register : process (clkm, rstn)	
   begin
     
@@ -77,15 +88,12 @@ begin
 	  end if;
 	  
 	end process;
-	
-  dmai.burst <= '0';
-  dmai.irq <= '0';
-  dmai.busy <= '0';
-  dmai.address <= haddr;
-  dmai.wdata <= hwdata;
-  dmai.write <= hwrite;
-  dmai.size <= hsize;
-	
+
+-- The code below shows our implementation of the state machine with the state transition
+-- and signal assignment written separately.
+
+
+
 --	state_conditions : process (current_state,htrans,dmao.ready)
 --	begin
 --	  

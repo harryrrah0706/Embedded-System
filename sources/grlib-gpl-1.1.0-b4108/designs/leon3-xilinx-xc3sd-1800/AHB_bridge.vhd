@@ -35,7 +35,7 @@ end;
 
 architecture structural of AHB_bridge is
   
---declare a component for state_machine
+-- Declare a component for state_machine
   component state_machine
     port(
       hwdata	: in std_logic_vector(AHBDW-1 downto 0); 	-- write data bus
@@ -51,7 +51,7 @@ architecture structural of AHB_bridge is
     );
   end component;
     
---declare a component for ahbmst 
+-- Declare a component for ahbmst
   component ahbmst
     generic (
       hindex  : integer := 0;
@@ -72,7 +72,7 @@ architecture structural of AHB_bridge is
     );
   end component;
       
---declare a component for data_swapper 
+-- Declare a component for data_swapper
   component data_swapper
     port(
       dmao : in ahb_dma_out_type;
@@ -80,47 +80,23 @@ architecture structural of AHB_bridge is
     );
   end component;
 
+-- Create signals for the architecture
   signal dmai : ahb_dma_in_type;
   signal dmao : ahb_dma_out_type;
 
 begin
   
---instantiate state_machine component and make the connections
+-- Instantiate state_machine component and make the connections
   state_machine_1 : state_machine
-    port map(
-      hwdata,
-      hready,
-      htrans,
-      haddr,
-      hwrite,
-      hsize,
-      dmai,
-      dmao,
-      clkm,
-      rstn);
+    port map(hwdata,hready,htrans,haddr,hwrite,hsize,dmai,dmao,clkm,rstn);
       
---instantiate the ahbmst component and make the connections 
+-- Instantiate the ahbmst component and make the connections
   ahbmst_1 : ahbmst
-    generic map(
-      0,
-      0,
-      VENDOR_GAISLER,
-      0,
-      0,
-      3,
-      0)
-    port map(
-      rstn,
-      clkm,
-      dmai,
-      dmao,
-      ahbmi,
-      ahbmo);
+    generic map(0,0,VENDOR_GAISLER,0,0,3,0)
+    port map(rstn,clkm,dmai,dmao,ahbmi,ahbmo);
       
---instantiate the data_swapper component and make the connections
+-- Instantiate the data_swapper component and make the connections
   data_swapper_1 : data_swapper
-    port map(
-      dmao,
-      hrdata);
+    port map(dmao,hrdata);
   
 end structural;

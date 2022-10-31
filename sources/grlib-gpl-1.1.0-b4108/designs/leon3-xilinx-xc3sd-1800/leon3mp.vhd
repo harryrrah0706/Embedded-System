@@ -40,6 +40,9 @@ use gaisler.jtag.all;
 library esa;
 use esa.memoryctrl.all;
 use work.config.all;
+library SIMPRIM;
+use SIMPRIM.VCOMPONENTS.ALL;
+use SIMPRIM.VPACKAGE.ALL;
 
 entity leon3mp is
   generic (
@@ -211,16 +214,48 @@ architecture rtl of leon3mp is
   constant BOARD_FREQ : integer := 125000;                                -- input frequency in KHz
   constant CPU_FREQ   : integer := BOARD_FREQ * CFG_CLKMUL / CFG_CLKDIV;  -- cpu frequency in KHz
   
+
+--  signal ahbmo_hbusreq :  STD_LOGIC; 
+--  signal ahbmo_hlock :  STD_LOGIC; 
+--  signal ahbmo_hwrite :  STD_LOGIC; 
+--  signal ahbmo_htrans :  STD_LOGIC_VECTOR ( 1 downto 0 ); 
+--  signal ahbmo_haddr :  STD_LOGIC_VECTOR ( 31 downto 0 ); 
+--  signal ahbmo_hsize :  STD_LOGIC_VECTOR ( 2 downto 0 ); 
+--  signal ahbmo_hburst :  STD_LOGIC_VECTOR ( 2 downto 0 ); 
+--  signal ahbmo_hprot :  STD_LOGIC_VECTOR ( 3 downto 0 ); 
+--  signal ahbmo_hwdata :  STD_LOGIC_VECTOR ( 31 downto 0 ); 
+--  signal ahbmo_hirq :  STD_LOGIC_VECTOR ( 31 downto 0 ); 
+--  signal ahbmo_hconfig :  STD_LOGIC_VECTOR2 ( 7 downto 0 , 31 downto 0 ); 
+--  signal ahbmo_hindex :  STD_LOGIC_VECTOR ( 3 downto 0 );
+  
   component cm0_wrapper
-    port(
- -- Clock and Reset -----------------
-    clkm : in std_logic;
-    rstn : in std_logic;
- -- AHB Master records --------------
-    ahbmi : in ahb_mst_in_type;
-    ahbmo : out ahb_mst_out_type;
- -- LED signal ----------------------
-    cm0_led : out std_ulogic);
+  port (
+    clkm : in STD_LOGIC; 
+    rstn : in STD_LOGIC; 
+    ahbmi_hready : in STD_LOGIC; 
+    ahbmi_hcache : in STD_LOGIC; 
+    ahbmi_testen : in STD_LOGIC; 
+    ahbmi_testrst : in STD_LOGIC; 
+    ahbmi_scanen : in STD_LOGIC; 
+    ahbmi_testoen : in STD_LOGIC; 
+    ahbmo_hbusreq : out STD_LOGIC; 
+    ahbmo_hlock : out STD_LOGIC; 
+    ahbmo_hwrite : out STD_LOGIC; 
+    cm0_led : out STD_LOGIC; 
+    ahbmi_hgrant : in STD_LOGIC_VECTOR ( 0 to 15 ); 
+    ahbmi_hresp : in STD_LOGIC_VECTOR ( 1 downto 0 ); 
+    ahbmi_hrdata : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    ahbmi_hirq : in STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    ahbmo_htrans : out STD_LOGIC_VECTOR ( 1 downto 0 ); 
+    ahbmo_haddr : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    ahbmo_hsize : out STD_LOGIC_VECTOR ( 2 downto 0 ); 
+    ahbmo_hburst : out STD_LOGIC_VECTOR ( 2 downto 0 ); 
+    ahbmo_hprot : out STD_LOGIC_VECTOR ( 3 downto 0 ); 
+    ahbmo_hwdata : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    ahbmo_hirq : out STD_LOGIC_VECTOR ( 31 downto 0 ); 
+    ahbmo_hconfig : out STD_LOGIC_VECTOR2 ( 7 downto 0 , 31 downto 0 ); 
+    ahbmo_hindex : out STD_LOGIC_VECTOR ( 3 downto 0 ) 
+  );
   end component;
   
 begin
@@ -628,7 +663,33 @@ begin
 ----------------------------------------------------------------------
   cm0gen : if CFG_CM0 = 1 generate
     wrapper : cm0_wrapper
-    port map (clkm,rstn,ahbmi,ahbmo(0),cm0_led);
+  port map(
+    clkm,
+    rstn,
+    ahbmi.hready,
+    ahbmi.hcache,
+    ahbmi.testen,
+    ahbmi.testrst,
+    ahbmi.scanen ,
+    ahbmi.testoen,
+    ahbmo(0).hbusreq,
+    ahbmo(0).hlock,
+    ahbmo(0).hwrite,
+    cm0_led,
+    ahbmi.hgrant,
+    ahbmi.hresp,
+    ahbmi.hrdata,
+    ahbmi.hirq,
+    ahbmo(0).htrans,
+    ahbmo(0).haddr,
+    ahbmo(0).hsize,
+    ahbmo(0).hburst,
+    ahbmo(0).hprot,
+    ahbmo(0).hwdata,
+    ahbmo(0).hirq,
+    open,
+    open
+  );
   end generate;
-  
+  data <= ahbmi.hrdata(7 downto 0);
 end rtl;
